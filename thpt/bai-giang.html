@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bài giảng AI THPT — PLT AIEdu</title>
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="64x64" href="../assets/img/favicon-64.png">
+<link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap">
+<link rel="stylesheet" href="../assets/css/site.css">
+<link rel="stylesheet" href="../assets/css/bai-giang.css">
+<script src="../assets/js/common.js"></script>
+</head>
+<body>
+<div class="bar"><div class="wrap">
+  <a class="back" href="./">← Về khóa học</a>
+  <label for="pick" style="position:absolute;left:-9999px">Chọn buổi</label>
+  <select id="pick"></select>
+</div></div>
+<main class="viewer" id="viewer">
+  <div class="wrap" style="width:100%">
+    <div class="stage" id="stage" aria-live="polite"></div>
+  </div>
+  <div class="wrap ctrl">
+    <button type="button" id="prev">← Trước</button>
+    <span class="count" id="count"></span>
+    <button type="button" id="next">Tiếp →</button>
+    <div class="dots" id="dots" aria-hidden="true"></div>
+    <button type="button" id="full">Toàn màn hình</button>
+    <label for="showNotes"><input type="checkbox" id="showNotes"> Ghi chú người dạy</label>
+  </div>
+  <div class="wrap"><div class="notes" id="notes" hidden></div></div>
+  <div class="wrap endbox" id="endbox"></div>
+</main>
+<script src="../assets/js/lessons-thpt.js"></script>
+<script src="../assets/js/lessons-thpt-2.js"></script>
+<script src="../assets/js/bai-giang.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+/* PLT-AIEdu — bảng màu mực xanh, cam, xanh mòng két; chữ Be Vietnam Pro */
+:root{
+  --bg:#F7F5EF; --surface:#FFFDF8; --ink:#1B2A4A; --muted:#55607A; --line:#E3DED1;
+  --accent:#D9661F; --accent-soft:#FBE6D6; --teal:#1F7A6E; --teal-soft:#E1EFEB;
+  --sun:#8A6D0B; --sun-soft:#FBF1CC;
+  --band:#1B2A4A; --band-fg:#FAF7F0; --band-muted:#C2CCDD; --band-accent:#F4A261;
+  --good:#2C7A4B; --good-soft:#DCEFE4; --bad:#B23A28; --bad-soft:#F8DDD8;
+  --f:'Be Vietnam Pro','Segoe UI',Arial,sans-serif;
+  --mono:'JetBrains Mono',Consolas,'Courier New',monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#121A2B; --surface:#1A2438; --ink:#EEF1F6; --muted:#A9B3C7; --line:#2C3850;
+  --accent:#F29355; --accent-soft:#3A2A22; --teal:#5CC3B3; --teal-soft:#1D3534;
+  --sun:#E8C95A; --sun-soft:#3A3420;
+  --band:#0C1322; --band-fg:#F3F1EA; --band-muted:#9FB0CB; --band-accent:#F4A261;
+  --good:#6FCB93; --good-soft:#1C3527; --bad:#F08B79; --bad-soft:#3B2220;
+  color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#121A2B; --surface:#1A2438; --ink:#EEF1F6; --muted:#A9B3C7; --line:#2C3850;
+  --accent:#F29355; --accent-soft:#3A2A22; --teal:#5CC3B3; --teal-soft:#1D3534;
+  --sun:#E8C95A; --sun-soft:#3A3420;
+  --band:#0C1322; --band-fg:#F3F1EA; --band-muted:#9FB0CB; --band-accent:#F4A261;
+  --good:#6FCB93; --good-soft:#1C3527; --bad:#F08B79; --bad-soft:#3B2220;
+  color-scheme:dark}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f);font-size:16px;line-height:1.6}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1140px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+h1,h2,h3{text-wrap:balance;line-height:1.15;margin:0}
+.btn{display:inline-flex;align-items:center;gap:8px;font:inherit;font-weight:700;font-size:15px;padding:12px 20px;border-radius:12px;border:0;background:var(--accent);color:#1B2A4A;cursor:pointer;text-decoration:none}
+.btn.dark{background:var(--ink);color:var(--bg)}
+.btn.ghost{background:transparent;color:inherit;border:1.5px solid currentColor}
+.btn:focus-visible,a:focus-visible,button:focus-visible,textarea:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.tag{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border-radius:99px}
+.p1{background:var(--teal-soft);color:var(--teal)} .p2{background:var(--accent-soft);color:var(--accent)}
+.p3{background:var(--sun-soft);color:var(--sun)} .p4{background:var(--line);color:var(--ink)}
+.mono{font-family:var(--mono);font-size:.92em}
+.muted{color:var(--muted)}
+/* Ảnh dự phòng khi chưa có file ảnh */
+.ph{position:relative;display:flex;align-items:flex-end;background:
+  radial-gradient(circle at 78% 30%,#E8772E 0 18%,transparent 18.5%),
+  radial-gradient(circle at 64% 70%,#2FA597 0 9%,transparent 9.5%),
+  radial-gradient(circle at 90% 82%,#F4D35E 0 5%,transparent 5.5%),
+  linear-gradient(135deg,#1B2A4A,#2B3F69);color:#FAF7F0;border-radius:inherit;overflow:hidden;width:100%;height:100%;min-height:180px}
+.ph span{padding:14px 18px;font-size:14px;line-height:1.45;max-width:70%;color:#DDE4F0}
+.ph::before{content:"";position:absolute;left:18px;top:18px;width:44px;height:44px;border-radius:12px;border:3px solid #F4A261;
+  background:radial-gradient(circle at 35% 45%,#F4A261 0 5px,transparent 6px),radial-gradient(circle at 65% 45%,#F4A261 0 5px,transparent 6px)}
+footer.site{border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+footer.site .wrap{padding-block:24px;display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}

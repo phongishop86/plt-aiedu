@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lớp học AI cho Người đi làm — PLT AIEdu</title>
+<meta name="description" content="16 buổi: dùng AI an toàn cho email, báo cáo, Excel, họp; AI cho nghiệp vụ chuyên môn và bán hàng online; tự động hóa bằng Python và Apps Script.">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="64x64" href="../assets/img/favicon-64.png">
+<link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap">
+<link rel="stylesheet" href="../assets/css/site.css">
+<link rel="stylesheet" href="../assets/css/hoc.css">
+<script src="../assets/js/common.js"></script>
+</head>
+<body>
+<header class="band">
+  <div class="wrap">
+    <div>
+      <a class="home" href="../"><img src="../assets/img/logo.png" alt="" width="28" height="28">← PLT AIEdu</a>
+      <div class="eyebrow" style="margin-top:10px">Khóa học miễn phí · Người đi làm · có Python</div>
+      <h1>Lớp học AI cho Người đi làm</h1>
+      <p>16 buổi: dùng AI an toàn cho email, báo cáo, Excel, họp; AI cho nghiệp vụ chuyên môn và bán hàng online; tự động hóa bằng Python và Apps Script.</p>
+    </div>
+    <div class="progress" aria-live="polite">
+      <div class="row"><span>Tiến độ của bạn</span><span><b id="doneCount">0</b>/<span id="total">0</span> bài</span></div>
+      <div class="bar"><i id="barFill"></i></div>
+    </div>
+  </div>
+</header>
+<nav class="tabs" aria-label="Mục chính">
+  <div class="wrap">
+    <a href="#bai-hoc" data-view="bai-hoc">Bài học</a>
+    <a href="#phong-tap-prompt" data-view="phong-tap-prompt" id="gymTab">Phòng tập</a>
+    <a href="#tro-choi" data-view="tro-choi">Trò chơi</a>
+  </div>
+</nav>
+<main><div class="wrap">
+<section class="view" id="v-bai-hoc">
+  <div class="lessons">
+    <div class="toc" id="toc" aria-label="Danh sách bài"></div>
+    <article class="lesson" id="lesson" aria-live="polite"></article>
+  </div>
+</section>
+<section class="view" id="v-phong-tap-prompt" hidden>
+  <div class="gym">
+    <div class="panel">
+      <span class="tag p2" id="gymTag"></span>
+      <h2 id="gymTitle"></h2>
+      <p class="muted" id="gymIntro"></p>
+      <label for="promptBox" class="muted">Prompt bạn định gửi cho AI</label>
+      <textarea id="promptBox" spellcheck="false"></textarea>
+      <div class="chips" id="samples" aria-label="Câu mẫu"></div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">
+        <button class="btn dark" type="button" id="copyBtn">Sao chép</button>
+        <span class="muted" id="copyMsg" role="status"></span>
+      </div>
+      <div class="alert" id="privacy" hidden></div>
+    </div>
+    <div class="panel">
+      <div class="score"><b id="scoreNum">0</b><span class="muted" id="gymUnit"></span></div>
+      <p class="muted" id="scoreMsg"></p>
+      <ul class="fingers" id="fingers"></ul>
+    </div>
+  </div>
+</section>
+<section class="view" id="v-tro-choi" hidden>
+  <div class="games" id="gamesBox"></div>
+</section>
+</div></main>
+<footer class="site"><div class="wrap"><span>Luôn dùng dữ liệu giả hoặc đã ẩn danh khi thực hành. Tiến độ chỉ lưu trên máy này.</span><span>© 2026 Phát Lộc Tech</span></div></footer>
+<script src="../assets/js/lessons-di-lam.js"></script>
+<script src="../assets/js/lessons-di-lam-2.js"></script>
+<script src="../assets/js/hoc.js"></script>
+</body>
+</html>
