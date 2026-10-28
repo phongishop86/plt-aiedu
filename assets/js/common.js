@@ -13,3 +13,12 @@ window.AIIMG = function (base, name, alt, cls) {
   var a = String(alt || "").replace(/"/g, "&quot;");
   return '<img class="' + (cls || "") + '" src="' + base + 'assets/img/' + name + '.jpg" alt="' + a + '" loading="lazy" onerror="AIPH(this)">';
 };
+
+/* Thanh "Hệ sinh thái PLT-Edu": AI Edu là trang con của PLT-Edu */
+(function () {
+  var me = document.currentScript && document.currentScript.src || "";
+  var base = me.replace(/assets\/js\/common\.js.*$/, "");
+  window.PLT_ECO = { current: "ai", base: base };
+  var s = document.createElement("script"); s.src = base + "assets/js/eco.js"; s.defer = true;
+  document.head.appendChild(s);
+})();
