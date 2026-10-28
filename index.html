@@ -25,43 +25,45 @@ header.top .wrap{display:flex;align-items:center;gap:20px;padding-block:12px}
 .menu a{text-decoration:none;color:var(--band-muted)}
 .menu a:hover{color:var(--band-fg)}
 .hero{background:var(--band);color:var(--band-fg);overflow:hidden}
-.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center;padding-block:56px 72px}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center;padding-block:clamp(20px,4vh,40px) clamp(24px,5vh,48px)}
 .hero .eyebrow{color:var(--band-accent)}
-.hero h1{font-size:clamp(34px,5.4vw,60px);font-weight:800;margin:14px 0 18px;letter-spacing:-.01em}
+.hero h1{font-size:clamp(28px,3.6vw,46px);font-weight:800;margin:10px 0 12px;letter-spacing:-.01em}
 .hero h1 em{font-style:normal;color:var(--band-accent)}
-.hero p.lead{font-size:clamp(17px,1.8vw,19px);color:var(--band-muted);max-width:52ch;margin:0 0 26px}
+.hero p.lead{font-size:clamp(15px,1.4vw,17px);color:var(--band-muted);max-width:56ch;margin:0 0 16px}
 .cta{display:flex;flex-wrap:wrap;gap:12px}
 .hero .btn.ghost{color:var(--band-fg)}
-.facts{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:28px;font-size:14px;color:var(--band-muted)}
+.facts{display:flex;flex-wrap:wrap;gap:6px 20px;margin-top:14px;font-size:13.5px;color:var(--band-muted)}
 .facts b{color:var(--band-fg)}
-.pick-q{margin:0 0 10px;font-weight:700;font-size:15px}
-.pick{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
-.pick a{position:relative;display:flex;flex-direction:column;gap:2px;padding:14px 40px 14px 16px;border-radius:16px;text-decoration:none;
+.pick-q{margin:0 0 8px;font-weight:700;font-size:14.5px}
+.pick{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.pick a{position:relative;display:flex;flex-direction:column;gap:2px;padding:10px 34px 10px 14px;border-radius:14px;text-decoration:none;
   background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);transition:border-color .15s,background .15s,transform .15s}
 .pick a:hover{border-color:var(--band-accent);background:rgba(255,255,255,.11);transform:translateY(-1px)}
-.pick b{font-size:16px;line-height:1.3}
-.pick span{font-size:13.5px;color:var(--band-muted)}
-.pick i{position:absolute;right:16px;top:50%;transform:translateY(-50%);font-style:normal;font-weight:800;color:var(--band-accent)}
-.teach{margin:14px 0 0;font-size:14.5px;color:var(--band-muted)}
+.pick b{font-size:15px;line-height:1.3}
+.pick span{font-size:12.5px;color:var(--band-muted)}
+.pick em{font-style:normal}
+.pick i{position:absolute;right:14px;top:50%;transform:translateY(-50%);font-style:normal;font-weight:800;color:var(--band-accent)}
+.teach{margin:10px 0 0;font-size:13.5px;color:var(--band-muted)}
 .teach a{color:var(--band-fg);font-weight:600}
-.demo{background:var(--surface);color:var(--ink);border-radius:24px;padding:20px;box-shadow:0 30px 60px rgba(0,0,0,.35);display:flex;flex-direction:column;gap:14px;min-width:0}
+.demo{background:var(--surface);color:var(--ink);border-radius:22px;padding:16px 18px;box-shadow:0 24px 48px rgba(0,0,0,.35);display:flex;flex-direction:column;gap:10px;min-width:0}
 .demo-head{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
-.demo-head b{font-size:18px}
+.demo-head b{font-size:16px}
 .demo-head span{font-size:12px;color:var(--muted)}
 .demo-tabs{display:flex;gap:6px;flex-wrap:wrap}
-.demo-tabs button{font:inherit;font-size:14px;font-weight:600;padding:7px 14px;border-radius:99px;border:1px solid var(--line);background:transparent;color:var(--muted);cursor:pointer}
+.demo-tabs button{font:inherit;font-size:13.5px;font-weight:600;padding:6px 13px;border-radius:99px;border:1px solid var(--line);background:transparent;color:var(--muted);cursor:pointer}
 .demo-tabs button[aria-selected="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
-.chat{display:flex;flex-direction:column;gap:10px;min-height:236px}
-.chat p{margin:0;padding:11px 14px;border-radius:16px;font-size:14.5px;line-height:1.5;max-width:92%}
+.chat{display:flex;flex-direction:column;gap:8px;min-height:210px}
+.chat p{margin:0;padding:9px 13px;border-radius:14px;font-size:14px;line-height:1.45;max-width:94%}
 .chat .me{align-self:flex-end;background:var(--accent-soft);border-bottom-right-radius:4px}
 .chat .ai{align-self:flex-start;background:var(--teal-soft);border-bottom-left-radius:4px}
 .chat small{display:block;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:3px}
-.demo-foot{font-size:14px;font-weight:600;color:var(--accent);text-decoration:none;border-top:1px solid var(--line);padding-top:12px}
+.demo-foot{font-size:13.5px;font-weight:600;color:var(--accent);text-decoration:none;border-top:1px solid var(--line);padding-top:10px}
 .demo-foot:hover{text-decoration:underline}
 section.block{padding-block:72px}
 section.block.alt{background:var(--surface);border-block:1px solid var(--line)}
-.head{max-width:60ch;margin-bottom:32px}
-.head h2{font-size:clamp(26px,3.4vw,38px);font-weight:800;margin:8px 0 10px}
+.head{margin-bottom:28px}
+.head p{max-width:70ch}
+.head h2{font-size:clamp(23px,2.6vw,32px);font-weight:800;margin:8px 0 10px;text-wrap:balance}
 .head p{color:var(--muted);margin:0}
 .head .eyebrow{color:var(--accent)}
 .levels{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
@@ -105,14 +107,18 @@ table.age th{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:
 .faq p{margin:10px 0 0;color:var(--muted)}
 .final{background:var(--band);color:var(--band-fg);text-align:left}
 .final .wrap{padding-block:56px;display:flex;flex-wrap:wrap;gap:24px;align-items:center;justify-content:space-between}
-.final h2{font-size:clamp(24px,3.2vw,34px);font-weight:800;max-width:24ch}
+.final h2{font-size:clamp(22px,2.6vw,30px);font-weight:800;text-wrap:balance}
 @media (max-width:900px){
   .hero .wrap,.safe{grid-template-columns:1fr}
   .levels,.features,.road{grid-template-columns:repeat(2,minmax(0,1fr))}
   .aud{grid-template-columns:1fr}
   .menu{display:none}
 }
-@media (max-width:520px){.levels,.features,.road,.pick{grid-template-columns:1fr}}
+@media (max-width:520px){.levels,.features,.road{grid-template-columns:1fr}}
+@media (max-width:900px){.demo{display:none}.hero .wrap{padding-block:18px 24px}}
+@media (max-width:330px){.pick{grid-template-columns:1fr}}
+@media (max-width:520px){.hm{display:none}header.top .btn{margin-left:auto}}
+@media (max-width:520px){.hero h1{font-size:27px}.hero p.lead{font-size:14.5px;margin-bottom:12px}.hero .eyebrow{font-size:11px;letter-spacing:.1em}.pick a{padding:9px 28px 9px 12px}.pick b{font-size:14px}.pick span{font-size:12px}.pick i{right:10px}.facts{font-size:12.5px;gap:4px 14px}}
 </style>
 </head>
 <body>
@@ -133,17 +139,17 @@ table.age th{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:
 <section class="hero" id="bat-dau">
   <div class="wrap">
     <div class="hero-txt">
-      <div class="eyebrow">Miễn phí · Không cần tài khoản · Học trên điện thoại</div>
+      <div class="eyebrow">Miễn phí · Không cần tài khoản<span class="hm"> · Học trên điện thoại</span></div>
       <h1>AI dễ hiểu, dùng được ngay, <em>cho cả nhà</em>.</h1>
       <p class="lead">Bài học ngắn bằng tiếng Việt, ví dụ đời thường: ôn bài, soạn email, làm bảng tính, nhận ra lừa đảo. Mỗi buổi có slide, quiz và bài thực hành.</p>
       <p class="pick-q">Bạn đang là…</p>
       <div class="pick">
-        <a href="tieu-hoc/"><b>Phụ huynh có con tiểu học</b><span>6–11 tuổi · học cùng người lớn</span><i aria-hidden="true">→</i></a>
-        <a href="thcs/"><b>Học sinh THCS</b><span>12–15 tuổi · 12 buổi</span><i aria-hidden="true">→</i></a>
-        <a href="thpt/"><b>Học sinh THPT</b><span>16–18 tuổi · ôn thi, Python</span><i aria-hidden="true">→</i></a>
-        <a href="di-lam/"><b>Người đi làm</b><span>Email, Excel, tự động hóa</span><i aria-hidden="true">→</i></a>
+        <a href="tieu-hoc/"><b>Phụ huynh tiểu học</b><span>6–11 tuổi<em class="hm"> · học cùng người lớn</em></span><i aria-hidden="true">→</i></a>
+        <a href="thcs/"><b>Học sinh THCS</b><span>12–15 tuổi<em class="hm"> · 12 buổi</em></span><i aria-hidden="true">→</i></a>
+        <a href="thpt/"><b>Học sinh THPT</b><span>16–18 tuổi<em class="hm"> · ôn thi, Python</em></span><i aria-hidden="true">→</i></a>
+        <a href="di-lam/"><b>Người đi làm</b><span>Email, Excel<em class="hm">, tự động hóa</em></span><i aria-hidden="true">→</i></a>
       </div>
-      <p class="teach">Thầy cô cần giáo án để dạy? <a href="#cho-ai">Xem bộ tài liệu cho người dạy</a></p>
+      <p class="teach">Thầy cô cần giáo án? <a href="#cho-ai">Xem tài liệu cho người dạy</a></p>
       <div class="facts"><span><b>60</b> buổi học</span><span><b>180</b> câu quiz</span><span><b>0đ</b> học phí</span><span>Tiến độ lưu ngay trên máy bạn</span></div>
     </div>
     <div class="demo" aria-label="Ví dụ AI giúp được gì">
@@ -185,7 +191,7 @@ table.age th{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:
 
 <section class="block alt">
   <div class="wrap">
-    <div class="head"><div class="eyebrow">Một buổi học có gì</div><h2>Học bằng mắt, bằng tay, bằng trò chơi</h2></div>
+    <div class="head"><div class="eyebrow">Một buổi học có gì</div><h2>Học bằng mắt, tay và trò chơi</h2></div>
     <div class="features">
       <div class="feat"><div class="ico">1</div><h3>Bài giảng slide</h3><p>Hình ảnh sinh động, mỗi slide một ý, xem toàn màn hình hoặc trên điện thoại.</p></div>
       <div class="feat"><div class="ico">2</div><h3>Quiz 3 câu</h3><p>Trả lời đúng cả 3 câu là bài tự được đánh dấu hoàn thành.</p></div>
@@ -197,7 +203,7 @@ table.age th{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:
 
 <section class="block" id="cho-ai">
   <div class="wrap">
-    <div class="head"><div class="eyebrow">Dành cho ai</div><h2>Phụ huynh yên tâm, thầy cô dạy được ngay, học sinh thấy vui</h2></div>
+    <div class="head"><div class="eyebrow">Dành cho ai</div><h2>Phụ huynh yên tâm, thầy cô dạy ngay</h2></div>
     <div class="aud">
       <article><span class="tag p2">Phụ huynh</span><h3>Con dùng AI đúng cách</h3><p class="pain">Lo con dùng AI chép bài, gặp nội dung xấu, lộ thông tin cá nhân.</p><p class="gain">Con học cách dùng AI như gia sư, biết giữ an toàn và trung thực.</p></article>
       <article><span class="tag p1">Thầy cô</span><h3>Giáo án có sẵn, dạy ngay</h3><p class="pain">Muốn dạy AI nhưng chưa có giáo án phù hợp lứa tuổi.</p><p class="gain">Đủ giáo trình cho 4 cấp, slide có ghi chú người dạy, phiếu bài tập có đáp án, hoạt động bấm giờ.</p></article>
