@@ -48,7 +48,35 @@ CAM_WORDS = r"\b(shot|close-up|closeup|view|isometric|diorama|angle|perspective|
 LIGHT_WORDS = r"\b(light|lighting|lit|sunrise|sunset|sunlight|golden hour|night|morning|evening|dusk|dawn|neon|spotlight|lamp|moonlight)\b"
 
 
-def build(i, scene, level, ratio, style=None, alt=""):
+# Người đi làm: người lớn 25–50 tuổi, đa ngành nghề, nơi làm việc thanh lịch, sáng, hiện đại, nhiều thiết bị.
+ADULT_CAST = ("The main characters are Vietnamese working adults aged 25 to 50 with East Asian features and natural adult proportions, "
+              "dressed in modern professional or work attire that fits their job (blazers, shirts, blouses, work jackets, uniforms of their trade).")
+ADULT_STYLE = ("Stylized 3D animated feature-film look with realistic adult proportions and expressive faces. "
+               "Elegant, airy, brightly lit modern workplace with large windows, clean lines, plants, "
+               "computer monitors, laptops, tablets and smart devices, showing that working with AI is natural and essential.")
+ADULT_PALETTE = ["warm white, light wood and teal accents", "soft grey and navy with warm orange accents",
+                 "cream and sage green with brass details", "cool white and sky blue with coral accents",
+                 "light oak and charcoal with golden highlights", "pearl white and emerald accents"]
+ADULT_RENDER = ["smooth glossy 3D render", "soft painterly 3D render", "clean architectural-visualization 3D render"]
+
+
+def build_adult(i, scene, ratio):
+    scene = scene.strip().rstrip(".")
+    extra = []
+    if not re.search(CAM_WORDS, scene, re.I):
+        extra.append(CAMERA[i % len(CAMERA)])
+    if not re.search(LIGHT_WORDS + r"|daylight|skylight", scene, re.I):
+        extra.append(["bright natural daylight", "soft morning sunlight through tall windows",
+                      "warm golden-hour sunlight through glass"][i % 3])
+    extra += [ADULT_PALETTE[(i * 5 + 1) % len(ADULT_PALETTE)], ADULT_RENDER[i % len(ADULT_RENDER)]]
+    x = ", ".join(extra)
+    people = ADULT_CAST + (" " + ROBI if "Robi" in scene else "")
+    return f"{scene}. {x[0].upper() + x[1:]}. {people} {ADULT_STYLE} {TAIL} Aspect ratio {ratio}."
+
+
+def build(i, scene, level, ratio, style=None, alt="", img=""):
+    if level == "di-lam" or img == "cap-di-lam":
+        return build_adult(i, scene, ratio)
     scene = scene.strip().rstrip(".")
     if style == "watercolor":
         return f"{scene}. Traditional watercolor illustration, soft paper texture. {TAIL} Aspect ratio {ratio}."
@@ -92,7 +120,7 @@ def from_thcs_csv():
 def write(level, items, csv_name, txt_name, with_lesson=True):
     lines, out = [], []
     for i, it in enumerate(items):
-        p = build(i, it["ep"], level, it.get("ratio", "16:9"), it.get("style"), it.get("alt", ""))
+        p = build(i, it["ep"], level, it.get("ratio", "16:9"), it.get("style"), it.get("alt", ""), it["img"])
         lines.append(f"{it['img']}.jpg | {p}")
         out.append([i + 1] + ([it["b"]] if with_lesson else [it.get("ratio", "16:9")]) + [it["img"] + ".jpg", it["alt"], p])
     with open(DOCS / csv_name, "w", encoding="utf-8-sig", newline="") as f:

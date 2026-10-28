@@ -20,6 +20,7 @@ Bộ cũ gắn chung một đoạn phong cách rất dài nên ảnh ra na ná n
 - Mỗi ảnh xoay vòng **góc máy** (toàn cảnh, cận cảnh, từ trên xuống, qua vai, mô hình thu nhỏ…), **ánh sáng** (sáng sớm, hoàng hôn, đèn đêm…), **bảng màu** (cam – xanh ngọc, pastel, xanh navy – vàng…) và **chất liệu** (bóng mịn, đất sét, đồ chơi thu nhỏ, giấy cắt lớp, nét cọ).
 - Cảnh đã tự nêu góc máy, ánh sáng thì giữ nguyên.
 - Rô-bi chỉ xuất hiện khoảng một nửa số ảnh (luôn giữ khi Rô-bi là nhân vật chính).
+- **Người đi làm:** nhân vật 25–50 tuổi, nhiều ngành nghề (văn phòng, kỹ thuật viên, kỹ sư, kế toán, pháp chế, kho vận, bán hàng, sáng tạo nội dung…), trang phục công sở hoặc đồ nghề, nơi làm việc thanh lịch, nhiều ánh sáng, nhiều màn hình và thiết bị thông minh.
 
 ## Tạo lại prompt
 Sửa cảnh (trường `ep`) trong file bài học, rồi chạy: `python3 tools/tao_prompt_anh.py`. Cảnh THCS và trang chủ lấy từ `prompt-anh.csv`.
