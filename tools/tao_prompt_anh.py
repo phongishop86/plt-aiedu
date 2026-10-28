@@ -16,7 +16,7 @@ DOCS = ROOT / "docs"
 CAST = {
     "tieu-hoc": "Children are Vietnamese kids aged 6 to 10 with black hair, round faces and rosy cheeks, in white school shirts with red scarves; adults are Vietnamese.",
     "thcs": "Kids are Vietnamese students aged 12 to 15 with black hair, in white school shirts; adults are Vietnamese.",
-    "thpt": "Teenagers are Vietnamese students aged 16 to 18 with black hair, in white school shirts with dark trousers or skirts; adults are Vietnamese.",
+    "thpt": "Teenagers are Vietnamese students aged 16 to 18 with black hair, in white school shirts with dark trousers or skirts; adults are Vietnamese aged 25 to 55 from varied professions, with natural adult proportions, dressed in clothing that fits their job.",
     "di-lam": "People are Vietnamese adults with East Asian features, dressed for modern Vietnamese workplaces.",
     "trang-chu": "All people are Vietnamese with East Asian features and black hair.",
 }
