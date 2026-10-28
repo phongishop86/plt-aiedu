@@ -5,7 +5,7 @@ Trang web chạy được khi chưa có ảnh: chỗ thiếu ảnh hiện khung 
 ## File dùng với extension h2dev_flow (mỗi dòng `tên-file.jpg | prompt`)
 | File | Số ảnh | Khổ |
 |---|---|---|
-| `prompt-anh-trang-chu-4x3.txt` | 5 | 4:3 |
+| `prompt-anh-trang-chu.txt` | 5 | 4:3 (ảnh cấp học), 16:9 (hero) |
 | `prompt-anh-thcs-16x9.txt` | 24 | 16:9 |
 | `prompt-anh-tieu-hoc-16x9.txt` | 40 | 16:9 |
 | `prompt-anh-thpt-16x9.txt` | 31 | 16:9 |

@@ -139,7 +139,7 @@ if __name__ == "__main__":
     write("di-lam", from_lessons(["assets/js/lessons-di-lam.js", "assets/js/lessons-di-lam-2.js"]),
           "prompt-anh-di-lam.csv", "prompt-anh-di-lam-16x9.txt")
     thcs = from_thcs_csv()
-    home = [r for r in thcs if r["ratio"] == "4:3"]
-    lessons = [r for r in thcs if r["ratio"] != "4:3"]
-    write("trang-chu", home, "prompt-anh-trang-chu.csv", "prompt-anh-trang-chu-4x3.txt", with_lesson=False)
+    home = [r for r in thcs if not r["img"].startswith("b")]
+    lessons = [r for r in thcs if r["img"].startswith("b")]
+    write("trang-chu", home, "prompt-anh-trang-chu.csv", "prompt-anh-trang-chu.txt", with_lesson=False)
     write("thcs", lessons, "prompt-anh-thcs.csv", "prompt-anh-thcs-16x9.txt", with_lesson=False)
