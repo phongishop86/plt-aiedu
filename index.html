@@ -34,8 +34,30 @@ header.top .wrap{display:flex;align-items:center;gap:20px;padding-block:12px}
 .hero .btn.ghost{color:var(--band-fg)}
 .facts{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:28px;font-size:14px;color:var(--band-muted)}
 .facts b{color:var(--band-fg)}
-.hero-img{aspect-ratio:4/3;border-radius:28px;overflow:hidden;box-shadow:0 30px 60px rgba(0,0,0,.35);max-width:100%}
-.hero-img img{width:100%;height:100%;object-fit:cover}
+.pick-q{margin:0 0 10px;font-weight:700;font-size:15px}
+.pick{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.pick a{position:relative;display:flex;flex-direction:column;gap:2px;padding:14px 40px 14px 16px;border-radius:16px;text-decoration:none;
+  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);transition:border-color .15s,background .15s,transform .15s}
+.pick a:hover{border-color:var(--band-accent);background:rgba(255,255,255,.11);transform:translateY(-1px)}
+.pick b{font-size:16px;line-height:1.3}
+.pick span{font-size:13.5px;color:var(--band-muted)}
+.pick i{position:absolute;right:16px;top:50%;transform:translateY(-50%);font-style:normal;font-weight:800;color:var(--band-accent)}
+.teach{margin:14px 0 0;font-size:14.5px;color:var(--band-muted)}
+.teach a{color:var(--band-fg);font-weight:600}
+.demo{background:var(--surface);color:var(--ink);border-radius:24px;padding:20px;box-shadow:0 30px 60px rgba(0,0,0,.35);display:flex;flex-direction:column;gap:14px;min-width:0}
+.demo-head{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.demo-head b{font-size:18px}
+.demo-head span{font-size:12px;color:var(--muted)}
+.demo-tabs{display:flex;gap:6px;flex-wrap:wrap}
+.demo-tabs button{font:inherit;font-size:14px;font-weight:600;padding:7px 14px;border-radius:99px;border:1px solid var(--line);background:transparent;color:var(--muted);cursor:pointer}
+.demo-tabs button[aria-selected="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.chat{display:flex;flex-direction:column;gap:10px;min-height:236px}
+.chat p{margin:0;padding:11px 14px;border-radius:16px;font-size:14.5px;line-height:1.5;max-width:92%}
+.chat .me{align-self:flex-end;background:var(--accent-soft);border-bottom-right-radius:4px}
+.chat .ai{align-self:flex-start;background:var(--teal-soft);border-bottom-left-radius:4px}
+.chat small{display:block;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:3px}
+.demo-foot{font-size:14px;font-weight:600;color:var(--accent);text-decoration:none;border-top:1px solid var(--line);padding-top:12px}
+.demo-foot:hover{text-decoration:underline}
 section.block{padding-block:72px}
 section.block.alt{background:var(--surface);border-block:1px solid var(--line)}
 .head{max-width:60ch;margin-bottom:32px}
@@ -90,7 +112,7 @@ table.age th{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:
   .aud{grid-template-columns:1fr}
   .menu{display:none}
 }
-@media (max-width:520px){.levels,.features,.road{grid-template-columns:1fr}}
+@media (max-width:520px){.levels,.features,.road,.pick{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -104,25 +126,36 @@ table.age th{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:
       <a href="#lo-trinh">Lộ trình THCS</a>
       <a href="#hoi-dap">Hỏi đáp</a>
     </nav>
-    <a class="btn" href="thcs/">Học ngay</a>
+    <a class="btn" href="#bat-dau">Học ngay</a>
   </div>
 </header>
 
-<section class="hero">
+<section class="hero" id="bat-dau">
   <div class="wrap">
-    <div>
-      <div class="eyebrow">Miễn phí · Không cần đăng ký</div>
-      <h1>Dùng AI để <em>học giỏi hơn</em>, không để chép bài.</h1>
-      <p class="lead">Khóa học AI cho học sinh và người đi làm. Bài giảng sinh động, quiz, phòng tập prompt và trò chơi, học ngay trên điện thoại hay máy tính.</p>
-      <div class="cta">
-        <a class="btn" href="tieu-hoc/">Khóa Tiểu học</a>
-        <a class="btn" href="thcs/">Khóa THCS</a>
-        <a class="btn" href="thpt/">Khóa THPT</a>
-        <a class="btn" href="di-lam/">Người đi làm</a>
+    <div class="hero-txt">
+      <div class="eyebrow">Miễn phí · Không cần tài khoản · Học trên điện thoại</div>
+      <h1>AI dễ hiểu, dùng được ngay, <em>cho cả nhà</em>.</h1>
+      <p class="lead">Bài học ngắn bằng tiếng Việt, ví dụ đời thường: ôn bài, soạn email, làm bảng tính, nhận ra lừa đảo. Mỗi buổi có slide, quiz và bài thực hành.</p>
+      <p class="pick-q">Bạn đang là…</p>
+      <div class="pick">
+        <a href="tieu-hoc/"><b>Phụ huynh có con tiểu học</b><span>6–11 tuổi · học cùng người lớn</span><i aria-hidden="true">→</i></a>
+        <a href="thcs/"><b>Học sinh THCS</b><span>12–15 tuổi · 12 buổi</span><i aria-hidden="true">→</i></a>
+        <a href="thpt/"><b>Học sinh THPT</b><span>16–18 tuổi · ôn thi, Python</span><i aria-hidden="true">→</i></a>
+        <a href="di-lam/"><b>Người đi làm</b><span>Email, Excel, tự động hóa</span><i aria-hidden="true">→</i></a>
       </div>
-      <div class="facts"><span><b>60</b> buổi học</span><span><b>180</b> câu quiz</span><span><b>4</b> cấp học</span><span><b>0đ</b> học phí</span></div>
+      <p class="teach">Thầy cô cần giáo án để dạy? <a href="#cho-ai">Xem bộ tài liệu cho người dạy</a></p>
+      <div class="facts"><span><b>60</b> buổi học</span><span><b>180</b> câu quiz</span><span><b>0đ</b> học phí</span><span>Tiến độ lưu ngay trên máy bạn</span></div>
     </div>
-    <div class="hero-img"><img src="assets/img/hero.jpg" alt="Học sinh Việt Nam học cùng chú robot nhỏ màu cam trong lớp học sáng sủa" onerror="AIPH(this)"></div>
+    <div class="demo" aria-label="Ví dụ AI giúp được gì">
+      <div class="demo-head"><b>AI giúp được gì?</b><span>Ví dụ minh họa</span></div>
+      <div class="demo-tabs" role="tablist">
+        <button type="button" role="tab" aria-selected="true" data-d="0">Ôn bài</button>
+        <button type="button" role="tab" aria-selected="false" data-d="1">Công việc</button>
+        <button type="button" role="tab" aria-selected="false" data-d="2">Cảnh giác</button>
+      </div>
+      <div class="chat" id="demoChat" aria-live="polite"></div>
+      <a class="demo-foot" id="demoFoot" href="thcs/#bai-5"></a>
+    </div>
   </div>
 </section>
 
@@ -238,6 +271,25 @@ table.age th{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:
     html+='</ol></div>';
   });
   document.getElementById("road").innerHTML=html;
+})();
+</script>
+<script>
+(function(){
+  var D=[
+    {me:"Đừng cho mình đáp án. Gợi ý từng bước giải 3x + 7 = 22 nhé.",ai:"Được! Bước 1: muốn vế trái chỉ còn 3x, em làm gì với số 7? Thử trừ cả hai vế cho 7 xem được bao nhiêu, rồi nói mình nghe.",f:"Dùng AI làm gia sư, không chép bài · THCS Buổi 5 →",h:"thcs/#bai-5"},
+    {me:"Bạn là trợ lý văn phòng. Viết email dưới 80 chữ hẹn họp 9h thứ Năm, nhờ mọi người mang số liệu tháng 10.",ai:"Tiêu đề: Họp giao ban 9h thứ Năm, mang số liệu tháng 10. Chào cả nhóm, mình hẹn họp lúc 9h sáng thứ Năm tại [phòng họp]. Mọi người mang theo số liệu tháng 10 giúp mình để tổng hợp nhanh. Ai bận, nhắn mình trước thứ Tư nhé. Cảm ơn cả nhà!",f:"Viết yêu cầu đủ 6 thành phần · Người đi làm Buổi 2 →",h:"di-lam/#bai-2"},
+    {me:"Có người gọi video giống hệt sếp, nhờ mình chuyển gấp 50 triệu cho đối tác. Mình nên làm gì?",ai:"Dừng lại, chưa chuyển. Cúp máy, gọi lại sếp qua số bạn đã lưu sẵn. Chuyển tiền phải theo quy trình duyệt, dù “gấp” đến đâu. Đây là kiểu lừa đảo giả mặt, giả giọng (deepfake).",f:"Phòng chống lừa đảo bằng AI · Người đi làm Buổi 10 →",h:"di-lam/#bai-10"}
+  ];
+  var chat=document.getElementById("demoChat"),foot=document.getElementById("demoFoot"),tabs=document.querySelectorAll(".demo-tabs button");
+  function esc(s){return s.replace(/[&<>]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;"}[c]})}
+  function show(k){
+    var d=D[k];
+    chat.innerHTML='<p class="me"><small>Bạn hỏi</small>'+esc(d.me)+'</p><p class="ai"><small>AI trả lời</small>'+esc(d.ai)+'</p>';
+    foot.textContent=d.f; foot.href=d.h;
+    tabs.forEach(function(b){b.setAttribute("aria-selected",String(+b.dataset.d===k))});
+  }
+  tabs.forEach(function(b){b.addEventListener("click",function(){show(+b.dataset.d)})});
+  show(0);
 })();
 </script>
 </body>
