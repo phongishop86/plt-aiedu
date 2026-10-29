@@ -19,6 +19,6 @@ window.AIIMG = function (base, name, alt, cls) {
   var me = document.currentScript && document.currentScript.src || "";
   var base = me.replace(/assets\/js\/common\.js.*$/, "");
   window.PLT_ECO = { current: "ai", base: base };
-  var s = document.createElement("script"); s.src = base + "assets/js/eco.js"; s.defer = true;
+  var s = document.createElement("script"); s.src = base + "assets/js/eco.js?v=3"; s.defer = true;
   document.head.appendChild(s);
 })();
